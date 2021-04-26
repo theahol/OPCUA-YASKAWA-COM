@@ -24,14 +24,6 @@ robot: Moto = Moto(
         [ControlGroupDefinition("robot", 0, 6, ["s", "l", "u", "r", "b", "t"])],
     )
 
-    
-#Connect to moto simulation with localhost
-'''
-robot: Moto = Moto(
-        "localhost",
-        [ControlGroupDefinition("robot", 0, 6, ["s", "l", "u", "r", "b", "t"])],
-    )'''
-
 robot.motion.start_servos()
 robot.motion.start_trajectory_mode()
 
