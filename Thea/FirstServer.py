@@ -18,10 +18,18 @@ import copy
 from opcua import ua, Server
 import numpy as np
 
+#Connect to physical robot with IP address 192.168.255.200
 robot: Moto = Moto(
         "192.168.255.200",
         [ControlGroupDefinition("robot", 0, 6, ["s", "l", "u", "r", "b", "t"])],
     )
+    
+#Connect to moto simulation with localhost
+'''
+robot: Moto = Moto(
+        "localhost",
+        [ControlGroupDefinition("robot", 0, 6, ["s", "l", "u", "r", "b", "t"])],
+    )'''
 
 robot.motion.start_servos()
 robot.motion.start_trajectory_mode()
