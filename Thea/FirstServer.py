@@ -23,6 +23,7 @@ robot: Moto = Moto(
         "192.168.255.200",
         [ControlGroupDefinition("robot", 0, 6, ["s", "l", "u", "r", "b", "t"])],
     )
+
     
 #Connect to moto simulation with localhost
 '''
